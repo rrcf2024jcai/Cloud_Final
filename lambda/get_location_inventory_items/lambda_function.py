@@ -15,7 +15,6 @@ table = dynamodb.Table('Inventory')
 def lambda_handler(event, context):
     try:
         # Get location_id from URL path parameters
-        # Ensure it is converted to int because our DB stores it as Number
         location_id = int(event['pathParameters']['id'])
         
         # Query the GSI (Global Secondary Index)
