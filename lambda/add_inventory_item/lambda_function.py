@@ -23,7 +23,7 @@ def lambda_handler(event, context):
         # Extract specific fields from the data
         item_name = body_data['name']
         item_desc = body_data['description']
-        item_qty = int(body_data['qty'])     # Make sure it's a number
+        item_qty = int(body_data['qty'])     
         item_price = str(body_data['price']) # Keep price as string or Decimal usually safely
         location_id = int(body_data['location_id'])
         
